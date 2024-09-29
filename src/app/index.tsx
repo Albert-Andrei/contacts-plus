@@ -12,8 +12,6 @@ import { ContactItem } from "@/components/ContactItem";
 import { useState } from "react";
 import { EmptyList } from "@/components/EmptyList";
 import { OrderDropdown, OrderOption } from "@/components/OrderDropdown";
-import { Typography } from "@/components/Typography";
-
 export default function HomeScreen() {
   const { theme } = useTheme();
   const { contacts } = useAppSelector((state) => state.contacts);
@@ -107,16 +105,16 @@ export default function HomeScreen() {
 }
 
 function getModifiedContacts(contacts: Contact[], search: string, order: OrderOption) {
-  const sortedContacts = contacts.sort((a, b) => {
+  const sortedContacts = [...contacts]?.sort((a, b) => {
     switch (order) {
       case OrderOption.ALP_ASC:
-        return a.name.localeCompare(b.name);
+        return a?.name?.localeCompare(b.name);
       case OrderOption.ALP_DESC:
-        return b.name.localeCompare(a.name);
+        return b.name?.localeCompare(a.name);
       case OrderOption.DATE_ASC:
-        return new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime();
+        return new Date(a?.createdAt).getTime() - new Date(b?.createdAt).getTime();
       case OrderOption.DATE_DESC:
-        return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+        return new Date(b?.createdAt).getTime() - new Date(a?.createdAt).getTime();
       default:
         return 0;
     }
