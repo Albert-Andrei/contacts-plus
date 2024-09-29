@@ -1,17 +1,18 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "allowUnusedLabels": true,
+    "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./*"
-      ]
-    }
-  },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    ".expo/types/**/*.ts",
-    "expo-env.d.ts"
-  ]
+      "@/*": ["./src/*"],
+      "@assets/*": ["../src/assets/*"],
+      "@theme/*": ["../src/theme/*"],
+      "@utils/*": ["../src/utils/*"],
+      "@styles/*": ["../src/styles/*"],
+      "@store/*": ["../src/store/*"],
+      "@components/*": ["./src/components/*"]
+    },
+    "strict": true
+  }
 }
