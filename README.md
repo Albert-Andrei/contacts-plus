@@ -12,7 +12,7 @@ Node.js installed (v20 or above), IOS simulator, Android emulator
 Clone the repository:
 
 ```
-git clone <repository-url>
+git clone https://github.com/Albert-Andrei/contacts-plus.git
 cd contacts-plus
 ```
 
