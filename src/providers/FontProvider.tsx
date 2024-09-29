@@ -1,5 +1,5 @@
 import { useFonts } from "expo-font";
-import React, { FC, PropsWithChildren, useEffect } from "react";
+import React, { FC, PropsWithChildren } from "react";
 
 import * as SplashScreen from "expo-splash-screen";
 const PoppinsMedium = require("../../assets/fonts/Poppins-Medium.ttf");

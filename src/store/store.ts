@@ -1,5 +1,4 @@
 import { useDispatch } from "react-redux";
-// store.js
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import contactsReducer from "./reducers/contacts.reducer";
 import {

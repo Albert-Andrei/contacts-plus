@@ -1,5 +1,4 @@
 import { PropsWithChildren, useState, FC, useEffect } from "react";
-import { ThemeContext } from "../contexts/ThemeContext";
 import NetInfo from "@react-native-community/netinfo";
 import { NetworkInfoContext } from "@/contexts/NetworkInfoContext";
 
